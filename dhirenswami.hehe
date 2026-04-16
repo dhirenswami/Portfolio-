@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhiren Swami | Athlete Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>  <!-- HERO SECTION -->  <header class="hero">
+    <div class="hero-content">
+      <h1>DHIREN SWAMI</h1>
+      <p>🏃‍♂️ Athlete | 💪 Fitness Enthusiast | ⚡ Innovator</p>
+      <a href="#about" class="btn">Explore</a>
+    </div>
+  </header>  <!-- NAVBAR -->  <nav class="navbar">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>  <!-- ABOUT -->  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a sports-driven individual passionate about fitness, endurance, and discipline. Along with my athletic journey, I build innovative tech projects and explore physics-based ideas.</p>
+  </section>  <!-- SKILLS -->  <section id="skills" class="section dark">
+    <h2>My Strengths</h2>
+    <div class="skills">
+      <div class="skill-card">🏃 Endurance</div>
+      <div class="skill-card">💪 Strength Training</div>
+      <div class="skill-card">⚡ Speed & Agility</div>
+      <div class="skill-card">🧠 Discipline</div>
+      <div class="skill-card">💻 Tech Projects</div>
+      <div class="skill-card">🎤 Presentation</div>
+    </div>
+  </section>  <!-- EXPERIENCE -->  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>🏆 Marathon Organizer</h3>
+      <p>Organized and managed a successful marathon event, ensuring coordination, participant engagement, and smooth execution.</p>
+    </div>
+  </section>  <!-- PROJECTS -->  <section id="projects" class="section dark">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>♻️ Smart Garbage System</h3>
+        <p>Automated waste detection using Raspberry Pi Pico.</p>
+      </div>
+      <div class="project-card">
+        <h3>📘 Ayurveda Psychology</h3>
+        <p>Flip class on mind and behavior concepts.</p>
+      </div>
+    </div>
+  </section>  <!-- CONTACT -->  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>Email: your-email@example.com</p>
+  </section>  <footer>
+    <p>🔥 Train Hard | Stay Strong | Keep Growing</p>
+  </footer>  <script src="script.js"></script></body>
+</html>/* CSS */ body { margin: 0; font-family: 'Montserrat', sans-serif; background: black; color: white; }
+
+.hero { height: 100vh; background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') center/cover no-repeat; display: flex; justify-content: center; align-items: center; text-align: center; }
+
+.hero h1 { font-size: 4rem; letter-spacing: 3px; }
+
+.hero p { font-size: 1.3rem; }
+
+.btn { margin-top: 20px; display: inline-block; padding: 12px 30px; background: #ff4d00; color: white; text-decoration: none; border-radius: 30px; }
+
+.navbar { display: flex; justify-content: center; background: #111; padding: 15px; }
+
+.navbar a { margin: 0 15px; color: white; text-decoration: none; }
+
+.section { padding: 70px 20px; text-align: center; }
+
+.dark { background: #111; }
+
+.skills { display: flex; flex-wrap: wrap; justify-content: center; }
+
+.skill-card { background: #ff4d00; margin: 10px; padding: 15px 25px; border-radius: 30px; }
+
+.card { background: #1a1a1a; padding: 20px; border-radius: 15px; margin: 20px auto; max-width: 400px; }
+
+.projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+.project-card { background: #1a1a1a; padding: 20px; border-radius: 15px; }
+
+footer { text-align: center; padding: 20px; background: black; color: #ff4d00; }
+
+/* JS */ document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); }); });
